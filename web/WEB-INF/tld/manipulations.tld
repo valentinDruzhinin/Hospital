@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>man</short-name>
+  <uri>/WEB-INF/tld/manipulations</uri>
+  <tag>
+    <name>show-manip</name>
+    <tag-class>controller.tags.ManipulationsShow</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  <tag>
+    <name>PatientsTag</name>
+    <tag-class>controller.tags.PatientsTag</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+  <tag>
+    <name>NursesTag</name>
+    <tag-class>controller.tags.NursesTag</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+</taglib>

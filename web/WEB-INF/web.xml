@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>filters.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>filters.SecurityDoctorFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>SecurityNurseFilter</filter-name>
+        <filter-class>filters.SecurityNurseFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityNurseFilter</filter-name>
+        <url-pattern>/jsp/nurse.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>/jsp/doctor.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+</web-app>
